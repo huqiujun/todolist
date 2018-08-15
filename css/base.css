@@ -1,0 +1,165 @@
+
+*{
+  box-sizing: border-box; 
+  outline: 0;  
+}
+
+input,button,textarea{
+  border: none;
+}
+
+body{
+  background-color: #947a6d;
+  /*background-color: rgb(93, 172, 129);*/
+  /*background-color: rgb(236, 184, 138);*/
+  color: #fff;
+}
+
+.container{
+  position: relative;
+
+  max-width: 700px;  
+  margin: 0 auto;
+}
+
+.msg{
+  display: none;
+  padding: 10px;
+  text-align: center;
+  background-color: #ffe264;
+  color: #000;
+}
+
+.msg-hider{
+  cursor: pointer;
+  margin-left: 20px;
+  color: #fff;
+}
+
+h1{
+  font-weight: normal;
+  text-align: center;
+}
+
+/*整体*/
+input,button,textarea,.task-item,.task-detail{
+  padding: 10px;
+  border-radius: 3px;
+}
+
+textarea,input[type='text'],input[type='time']{
+  display: block;
+  width: 100%;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,.3);
+  background-color: #ddd;
+}
+
+button{
+  display: inline-block;
+  cursor: pointer;
+  background-color: #46b1e4;
+}
+
+/*添加任务*/
+.newtask input{
+  width: 84%;
+  margin-right: 1%;  
+  float: left;
+  line-height: 20px;
+}
+
+.newtask button{
+  width: 15%;
+  line-height: 20px;
+}
+
+/*任务列表*/
+.task-list{
+  margin:10px 0;
+}
+
+.task-item{
+  position: relative;
+
+  margin-bottom: 2px;
+
+  background-color: #fff;
+  color: #333;
+
+  box-shadow: 0 2px 3px rgba(0,0,0,0.3); 
+
+  cursor:pointer;
+  transition: background 0.2s;
+}
+
+.task-item:hover{
+  background-color: #ddd;
+}
+
+/*被打勾的任务项的样式*/
+.task-item.completed{
+  color: #aaa;
+  text-decoration: line-through;
+}
+
+
+.task-content{
+  margin-left: 10px;
+}
+
+.del,.detail{
+  float: right;
+  padding: 0 2px;
+}
+
+.mask{
+  display: none;
+
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  background: rgba(30,30,30,.6);
+}
+
+.task-detail{
+
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  width: 50%;
+  height: 300px;
+
+  background-color: #fff;
+  color: #000;
+
+  overflow: auto; 
+}
+
+.task-detail .content{
+  padding: 10px;
+  font-weight: bold;
+}
+
+textarea{
+  min-height: 100px;
+  margin: 10px 0;
+}
+
+.task-detail button{
+  margin-top: 10px;
+}
+
+.task-detail .fix{
+  display: none;
+}
+
+/*使video元素不显示*/
+video{
+  height: 0;
+  width: 0;
+}

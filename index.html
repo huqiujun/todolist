@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>my todo list</title>
+    <link href="css/normalize.min.css" rel="stylesheet"> 
+    <link rel="stylesheet"  href="css/base.css">
+</head>
+
+<body>
+    <!-- 弹出提示框 -->
+    <div class="msg">
+        提醒：
+    <span class="msg-content"></span>
+        <span class="msg-hider">朕知道了</span>
+    </div>
+
+    <!-- 主内容区 -->
+    <div class="container">
+        <h1>我的待办事项</h1>
+        <!-- 添加任务处 -->
+        <form class="newtask">
+            <input type="text" name="" placeholder="e.g 交作业" autofocus>
+            <button type="submit">添加</button>
+        </form>
+
+        <div class="task-list">
+          <!--   <div class="task-item">
+              <span><input type="checkbox" name=""></span>
+              <span class="task-content">111</span>
+              <span class="del">delete</span>
+              <span class="detail">detail</span>
+            </div> -->
+        </div>
+        <div class="mask"></div>
+
+        <!-- 任务详情 -->
+        <form class="task-detail">
+            <div class="content"> </div> 
+            <input type="text" class="fix">
+            <div class="desc"> <!-- 任务详情 -->
+                <textarea></textarea>
+            </div>   
+            <div class="remind">  
+                <label>提醒时间</label> 
+                <input type="time" class="datetime">
+                <button type="submit">更新</button>
+            </div>
+        </form>
+    </div>
+
+    <video src = 'lib/alert.mp3' class="alerter"></video>
+
+    <script src='js/jquery-3.1.1.min.js'></script>
+    <script src="js/store.legacy.min.js"></script>
+    <script src='js/base.js'></script>
+</body>
+</html>
